@@ -1,7 +1,7 @@
 const express = require('express');
-const campsiteRouter = express.Router();
+const promotionRouter = express.Router();
 
-campsiteRouter.route('/')
+promotionRouter.route('/')
     .all((req, res, next) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'text/plain');
@@ -21,7 +21,7 @@ campsiteRouter.route('/')
         res.end('Deleting all campsites');
     });
 
-campsiteRouter.route('/:campsiteId')
+promotionRouter.route('/:campsiteId')
     .all((req, res, next) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'text/pain');
@@ -44,4 +44,4 @@ campsiteRouter.route('/:campsiteId')
     });
 
 
-module.exports = campsiteRouter;
+module.exports = promotionRouter;
